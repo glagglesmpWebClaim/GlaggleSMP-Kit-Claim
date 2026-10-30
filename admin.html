@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b100f">
+  <title>Admin · GlaggleSMP</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="admin.css">
+  <script src="config.js"></script>
+  <script src="admin.js" defer></script>
+</head>
+<body>
+  <header class="topbar wrap">
+    <a class="brand" href="index.html"><span class="brand-mark">G</span><span>GLAGGLE<span class="brand-light">SMP</span></span></a>
+    <div class="top-status">ARMORY <span class="divider">/</span> ADMIN</div>
+    <a class="server-ip" href="index.html">BACK TO SITE <span>‹</span></a>
+  </header>
+  <main class="admin-wrap">
+    <div class="eyebrow"><span class="eyebrow-line"></span> RESTRICTED ACCESS</div>
+    <h1>Armory <span>control.</span></h1>
+    <p class="admin-lede">Sign in to review recent kit claim activity.</p>
+
+    <form class="admin-panel" id="login-form">
+      <div class="form-title"><span>ADMIN LOGIN</span><span class="lock">▣ PRIVATE</span></div>
+      <label for="password">PASSWORD</label>
+      <input id="password" name="password" type="password" autocomplete="current-password" required>
+      <button class="claim-submit" id="login-button" type="submit">SIGN IN <span>→</span></button>
+      <p class="admin-message" id="admin-message" role="status" aria-live="polite"></p>
+    </form>
+
+    <section class="admin-dashboard" id="dashboard" hidden>
+      <div class="dashboard-head"><div><div class="eyebrow"><span class="eyebrow-line"></span> LIVE CLAIM ACTIVITY</div><h2>Recent requests</h2></div><button class="logout-button" id="logout-button">SIGN OUT ↗</button></div>
+      <div class="status-cards" id="status-cards"></div>
+      <div class="table-wrap"><table><thead><tr><th>PLAYER</th><th>STATUS</th><th>MESSAGE</th><th>WHEN</th></tr></thead><tbody id="claim-rows"></tbody></table></div>
+      <p class="admin-note">Shows up to 50 recent requests. Link codes and secret values are never shown.</p>
+    </section>
+  </main>
+</body>
+</html>
